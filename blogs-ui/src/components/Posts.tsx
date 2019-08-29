@@ -18,7 +18,7 @@ export const Posts: React.FC<PostsProps> = props => {
 
   return (
     <div className='mt-5'>
-      <h4>Posts for user {props.user.name} </h4>
+      <h4>Posts from {props.user.name}: </h4>
       {
           few.map(p => (<Post key={p.id} post={p}></Post>))
 
@@ -26,7 +26,7 @@ export const Posts: React.FC<PostsProps> = props => {
       {
           displayedAll && rest.map(p => (<Post key={p.id} post={p}></Post>))
       }
-      {loadMore  && !displayedAll && <button onClick={() => setDisplayedAll(true)}>Load more</button>}
+      {loadMore  && !displayedAll && <button className="btn btn-primary mt-4" onClick={() => setDisplayedAll(true)}>Load more ...</button>}
 
     </div>
   );

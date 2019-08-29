@@ -5,7 +5,7 @@ export const UserButton: React.FC<UserButtonProps> = (props) => {
     const onClick = () => {
         props.selectUser(props.user);
     }
-    const classes = `btn  mr-1 ${props.selectedUser && props.selectedUser.id === props.user.id ? 'btn-secondary' : 'btn-primary'}`
+    const classes = `btn  mr-1 ${props.selectedUser && props.selectedUser.id === props.user.id ? 'btn-warning' : 'btn-primary'}`
     return (
         <button className={classes} type="button" onClick={onClick}>{props.user.username}</button>
     );

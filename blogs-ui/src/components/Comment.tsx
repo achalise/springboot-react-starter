@@ -8,7 +8,7 @@ export const Comment: React.FC<CommentProps> = (props) => {
           <div className="card">
             <div className="card-body">
               <p className="card-text">{props.userComment.body}</p>
-              <p className="justify-content-end">{props.userComment.email}</p>
+              <p className="justify-content-end text-primary">{props.userComment.email}</p>
             </div>
           </div>
         </div>
