@@ -3,7 +3,7 @@
 ### Backend
 
 Implemented using Spring Boot, 
-- `userPosts` endpoint aggregages
+- `userAndPosts` endpoint aggregages
 `/users` and `/posts` endpoint from at https://jsonplaceholder.typicode.com,
 and returns users with along with their posts.
 - `comments` endpoint delegates pass through the call to `/comments` endpoint
