@@ -7,10 +7,12 @@ import { Posts } from "./components/Posts";
 
 const App: React.FC = () => {
   const [state, setState] = useState<State>({});
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
     console.log(`Running effect`);
     apiService.getUsers().then(users => {
       setState({ ...state, users: [...users] });
+      setLoading(false);
     });
   }, []);
 
@@ -21,7 +23,7 @@ const App: React.FC = () => {
     <>
       <div className="container">
         <h4>Please select a user below to load the posts:</h4>
-        {state.users &&
+        {!loading && state.users &&
           state.users.map(u => (
             <UserButton
               key={u.id}
@@ -30,6 +32,9 @@ const App: React.FC = () => {
               selectedUser={state.selectedUser}
             ></UserButton>
           ))}
+          {loading && (
+            <div className="">Loading .....</div>
+          )}
       </div>
 
       {state.selectedUser && (

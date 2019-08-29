@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Post as UserPost, Comment as UserComment } from "../models";
 import userService from "../services/user-service";
+import { Comments } from "./Comments";
 
 export const Post: React.FC<PostProps> = props => {
   const [comments, setComments] = useState<UserComment[]>([]);
@@ -31,13 +32,13 @@ export const Post: React.FC<PostProps> = props => {
           {!displayComments ? `Show comments` : `Hide comments`}
         </button>
       </div>
-      {displayComments && (
+      {displayComments && loaded && (
         <div>
-          {comments.map(comment => (
-            <p>{comment.email}</p>
-          ))}
+          <Comments userComments={comments}></Comments>
         </div>
       )}
+
+      {displayComments && !loaded && <div className="">Please wait, loading comments ...</div>}
     </>
   );
 };
