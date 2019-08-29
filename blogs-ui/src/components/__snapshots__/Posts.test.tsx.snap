@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts component tests Should only display first three comments 1`] = `
+<h4>
+  Posts from 
+  testName
+  : 
+</h4>
+`;
+
+exports[`Posts component tests Should only display first three posts 1`] = `
+<h4>
+  Posts from 
+  testName
+  : 
+</h4>
+`;
+
+exports[`Posts component tests Should only display first three posts 2`] = `
+<button
+  class="btn btn-primary mt-4"
+>
+  Load more ...
+</button>
+`;
+
+exports[`Posts component tests Should only display first three posts and then display all after load more button is clicked 1`] = `
+<h4>
+  Posts from 
+  testName
+  : 
+</h4>
+`;
+
+exports[`Posts component tests Should only display first three posts and then display all after load more button is clicked 2`] = `
+<button
+  class="btn btn-primary mt-4"
+>
+  Load more ...
+</button>
+`;

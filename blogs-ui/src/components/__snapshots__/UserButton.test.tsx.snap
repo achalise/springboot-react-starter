@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserButton tests Should correctly mark the selected user 1`] = `
+<button
+  class="btn  mr-1 btn-warning"
+  type="button"
+>
+  testuser
+</button>
+`;
+
+exports[`UserButton tests Should correctly mark the selected user 2`] = `
+<button
+  class="btn  mr-1 btn-warning"
+  type="button"
+>
+  testuser
+</button>
+`;

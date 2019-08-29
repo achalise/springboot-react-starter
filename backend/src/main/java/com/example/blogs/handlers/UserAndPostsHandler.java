@@ -2,6 +2,7 @@ package com.example.blogs.handlers;
 
 import com.example.blogs.models.Post;
 import com.example.blogs.models.User;
+import com.example.blogs.services.BlogService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -15,15 +16,15 @@ import java.util.stream.Stream;
 @Component
 public class UserAndPostsHandler {
 
-    private WebClient blogService;
+    private BlogService blogService;
 
-    public UserAndPostsHandler(WebClient blogService) {
+    public UserAndPostsHandler(BlogService blogService) {
         this.blogService = blogService;
     }
 
     public Mono<ServerResponse> getAll(ServerRequest request) {
-        Mono<User[]> users = blogService.get().uri("/users").retrieve().bodyToMono(User[].class);
-        Mono<Post[]> posts = blogService.get().uri("/posts").retrieve().bodyToMono(Post[].class);
+        Mono<User[]> users = blogService.getAllUsers();
+        Mono<Post[]> posts = blogService.getAllPosts();
 
         Mono<User[]> userPosts = users.zipWith(posts, (u, p) -> {
             Stream.of(u).forEach(user -> {

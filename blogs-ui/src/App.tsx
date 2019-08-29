@@ -9,10 +9,12 @@ const App: React.FC = () => {
   const [state, setState] = useState<State>({});
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    console.log(`Running effect`);
     apiService.getUsers().then(users => {
       setState({ ...state, users: [...users] });
       setLoading(false);
+    }).catch(err => {
+      setLoading(false);
+      //TODO: show error page ..
     });
   }, []);
 

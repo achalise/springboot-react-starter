@@ -14,6 +14,8 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 
 import java.util.Arrays;
 
+//Only added for UI testing
+//TODO only instantiate this bean conditionally on certain property, e.g., testEnabled=true
 @Configuration
 public class AppConfiguration {
     @Bean

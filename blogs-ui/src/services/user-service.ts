@@ -3,9 +3,6 @@ import { User, Comment } from "../models";
 const getUsers = async (): Promise<User[]> => {
     const resp = await fetch("http://localhost:8080/userAndPosts");
     const users = await resp.json() as User[];
-
-    const comments = await getComments(1);
-    console.log(`The comments: ` + comments);
     return users;
 }
 

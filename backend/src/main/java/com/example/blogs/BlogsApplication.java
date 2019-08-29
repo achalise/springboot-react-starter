@@ -10,11 +10,11 @@ import org.springframework.web.reactive.function.client.WebClient;
 public class BlogsApplication {
 
 	@Value("${blogs.service}")
-	private String blogServiceUrl;
+	private String blogClientUtl;
 
-	@Bean(name="blogService")
-	WebClient blogService() {
-		return WebClient.create(blogServiceUrl).mutate().build();
+	@Bean(name="blogClient")
+	WebClient blogClient() {
+		return WebClient.create(blogClientUtl).mutate().build();
 	}
 
 	public static void main(String[] args) {
