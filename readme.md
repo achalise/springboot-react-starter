@@ -16,14 +16,14 @@ To run:
 
 Implemented using `ReactJS`, application bootstrapped using `create-react-app`
 To run:
-```cd blogs-ui``` and ```npm start```
+```cd blogs-ui```, ```npm install``` and ```npm start```
 This will run the client at `localhost:3000`
 
 Backend has CORS configured to allow all requests for now to enable testing.
 
 ### Testing
 
-There wsa not enough time to implement all tests, as I wanted to get the functionality
+There was not enough time to implement all tests, as I wanted to get the functionality
 done as priority. There are sample test cases implemented as example / foundation to 
 implement further tests.
 
