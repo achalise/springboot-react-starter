@@ -14,6 +14,7 @@ import java.util.List;
 @ToString
 public class User {
 	private String id;
+	private String name;
 	private String username;
 	private String email;
 	private List<Post> posts = new ArrayList<>();
