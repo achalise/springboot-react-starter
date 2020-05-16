@@ -23,11 +23,8 @@ Backend has CORS configured to allow all requests for now to enable testing.
 
 ### Testing
 
-There was not enough time to implement all tests, as I wanted to get the functionality
-done as priority. There are sample test cases implemented as example / foundation to 
-implement further tests.
+Example test cases to get started with unit and integration testing
 
 ### Styling
 
-Very minimal attention given to styling, used `bootstrap 4` to quickly
-implement the UI. 
+bare bones `bootstrap 4`
